@@ -1,5 +1,7 @@
 package com.company.jian_zhi_offer;
 
+import java.lang.reflect.Array;
+
 /**
  * 把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。
  * 输入一个非递减排序的数组的一个旋转，输出旋转数组的最小元素。
@@ -17,5 +19,34 @@ public class C3_MinNumberInRotateArray {
             return tmp;
         }
 
+    }
+
+    public static int minNumberInRotateArray1(int [] array) {
+        if(array.length == 0)return 0;
+        else{
+            if(array.length == 1)return array[0];
+            else{
+                int tmp = 0;
+                int idx1 = 0;
+                int idx2 = array.length - 1;
+                while(idx2 > idx1){
+                    if(array[idx1] < array[idx2]){
+                        tmp = array[idx1];
+                        idx2--;
+                    }else{
+                        tmp = array[idx2];
+                        idx1++;
+                    }
+                }
+                return tmp;
+                
+
+            }
+
+        }
+
+    }
+    public static void main(String[] args){
+        System.out.println(minNumberInRotateArray1(new int[]{5,4,5,6,2}));
     }
 }
