@@ -7,6 +7,14 @@ package com.company.jian_zhi_offer;
  * */
 public class C10_ReOrderArray {
     public static void reOrderArray(int [] array) {
+        int [] res = new int[array.length];
+        for(int i = 0; i < array.length;i++){
+            if(array[i] / 2 == 0){
+
+            }else{
+
+            }
+        }
 
     }
 }
