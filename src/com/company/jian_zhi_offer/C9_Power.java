@@ -5,8 +5,16 @@ package com.company.jian_zhi_offer;
  * 保证base和exponent不同时为0
  * */
 public class C9_Power {
-    public double Power(double base, int exponent) {
-        return 0;
-
+    public static double Power(double base, int exponent) {
+        if(base == 0) return 0;
+        if(exponent == 0)return 1;
+        if(exponent > 0){
+            return Power(base,exponent-1) * base;
+        }else{
+            return 1 / Power(base,-exponent);
+        }
+    }
+    public static void main(String[] args){
+        System.out.println(Power(2,-10));
     }
 }
