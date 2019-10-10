@@ -1,4 +1,4 @@
-package com.company.jian_zhi_offer;
+package com.company.jian_zhi_offer.tree;
 
 import com.company.jian_zhi_offer.base_package.TreeNode;
 

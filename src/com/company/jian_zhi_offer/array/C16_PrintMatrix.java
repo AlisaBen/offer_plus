@@ -1,4 +1,4 @@
-package com.company.jian_zhi_offer;
+package com.company.jian_zhi_offer.array;
 
 import java.util.ArrayList;
 import java.util.concurrent.TransferQueue;
