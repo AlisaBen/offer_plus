@@ -8,6 +8,8 @@ package com.company.jian_zhi_offer.array;
 public class C30_PrintMinNumber {
 
     public String PrintMinNumber(int [] numbers) {
+
+        System.out.println("s");
         return "";
     }
 }
