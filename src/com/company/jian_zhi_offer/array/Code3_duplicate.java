@@ -11,20 +11,42 @@ public class Code3_duplicate {
         int [] duplicate_numbers = new int[length];
         Boolean flag = false;
         for(int i = 0;i < length;i++){
-            System.out.println(i);
-            System.out.println(numbers[i]);
             if(duplicate_numbers[numbers[i]] == 0){
                 duplicate_numbers[numbers[i]] += 1;
             }else{//有可能duplication输入的长度是0
-//                System.out.println(duplication[0]);
                 duplication[0] = numbers[i];
                 flag = true;
                 break;
             }
         }
-
         return flag;
     }
+    public static boolean duplicate1(int numbers[],int length,int [] duplication) {
+        Boolean flag = false;
+        int tmp ;
+        if(length > 0){
+
+        }
+        for(int i = 0; i < length; i++){
+            if(numbers[numbers[i]] == length){//重複
+                duplication[0] = numbers[i];
+                flag = true;
+            }else{
+                tmp = numbers[numbers[i]];
+                numbers[numbers[i]] = length;
+                if(numbers[tmp] == length){
+                    duplication[0] = numbers[i];
+                    flag = true;
+                }else{
+                    int tmp1 = numbers[tmp];
+                    numbers[tmp] = length;
+                    tmp = tmp1;
+                }
+            }
+        }
+        return flag;
+    }
+
     public static void main(String[] args){
 //        int [] a = new int[3];
 //        for(int i = 0;i < a.length;i ++){
