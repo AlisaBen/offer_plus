@@ -1,11 +1,36 @@
 package com.company.jian_zhi_offer.array;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
 /**
  * 在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中任意一个重复的数字。
  * 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是第一个重复的数字2或者3。
  * */
 public class Code3_duplicate {
-    public boolean duplicate(int numbers[],int length,int [] duplication) {
-        return true;
+    public static boolean duplicate(int numbers[],int length,int [] duplication) {
+        int [] duplicate_numbers = new int[length];
+        Boolean flag = false;
+        for(int i = 0;i < length;i++){
+            System.out.println(i);
+            System.out.println(numbers[i]);
+            if(duplicate_numbers[numbers[i]] == 0){
+                duplicate_numbers[numbers[i]] += 1;
+            }else{//有可能duplication输入的长度是0
+//                System.out.println(duplication[0]);
+                duplication[0] = numbers[i];
+                flag = true;
+                break;
+            }
+        }
+
+        return flag;
+    }
+    public static void main(String[] args){
+//        int [] a = new int[3];
+//        for(int i = 0;i < a.length;i ++){
+//            System.out.println(a[i]);
+//        }
+        System.out.println(duplicate(new int[]{3,4,1,1,2},5,new int[1]));
+
     }
 }
