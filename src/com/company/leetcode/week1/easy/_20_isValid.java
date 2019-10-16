@@ -1,4 +1,4 @@
-package com.company.leetcode;
+package com.company.leetcode.week1.easy;
 
 import java.util.Stack;
 

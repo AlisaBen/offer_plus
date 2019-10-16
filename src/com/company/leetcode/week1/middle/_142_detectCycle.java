@@ -1,4 +1,4 @@
-package com.company.leetcode;
+package com.company.leetcode.week1.middle;
 
 import com.company.jian_zhi_offer.base_package.ListNode;
 

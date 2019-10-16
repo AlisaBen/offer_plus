@@ -1,4 +1,4 @@
-package com.company.leetcode;
+package com.company.leetcode.week1.easy;
 
 /**
  * created by benyafang on 2019/10/15 22:30
