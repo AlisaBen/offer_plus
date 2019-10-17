@@ -1,5 +1,8 @@
 package com.company.leetcode.week1.easy;
 
+/**
+ * created by benyafang on 2019/10/17 23:00
+ * */
 public class _171_titleToNumber {
     public static int titleToNumber(String s) {
         int len = s.length();
