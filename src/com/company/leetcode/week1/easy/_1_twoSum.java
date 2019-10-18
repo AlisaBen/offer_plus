@@ -27,6 +27,15 @@ public class _1_twoSum {
         }
         throw new IllegalArgumentException("");
     }
+    public static int[] twoSum2(int [] nums,int target){
+        Map<Integer,Integer> tmp = new HashMap<>();
+        for(int i = 0; i < nums.length;i++){
+            int component = target - nums[i];
+            if(tmp.containsKey(component))return new int[]{tmp.get(component),i};
+            tmp.put(nums[i],i);
+        }
+        throw new IllegalArgumentException("");
+    }
 
 
     public static void main(String[] args){
