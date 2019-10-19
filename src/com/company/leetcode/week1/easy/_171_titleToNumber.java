@@ -8,8 +8,8 @@ public class _171_titleToNumber {
         int len = s.length();
         int res = 0;
         for(int i = 0;i < len;i++){
-            String subStr = s.substring(i,i+1);
-            res += Math.pow(26,i) + subStr.compareTo("A") * Math.pow(26,len - i - 1);
+//            String subStr = s.substring(i,i+1);
+            res += Math.pow(26,i) + (s.charAt(i) - 'A') * Math.pow(26,len - i - 1);
         }
         return res;
     }

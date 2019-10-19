@@ -3,6 +3,8 @@ package com.company.leetcode.week1.middle;
 import com.company.jian_zhi_offer.base_package.ListNode;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * created by benyafang on 2019/10/14 19:40
@@ -46,6 +48,20 @@ public class _141_hasCycle {
             }
         }
     }
+
+    public boolean hasCycle3(ListNode head) {
+        Set<ListNode> nodesSeen = new HashSet<>();
+        while (head != null) {
+            if (nodesSeen.contains(head)) {
+                return true;
+            } else {
+                nodesSeen.add(head);
+            }
+            head = head.next;
+        }
+        return false;
+    }
+
 
 
 

@@ -16,7 +16,6 @@ public class _136_singleNumber {
             v ^= x;
         }
         return v;
-
     }
     public static void main(String[] args){
         System.out.println(singleNumber(new int[]{2}));

@@ -9,7 +9,6 @@ public class _55_canJump {
     public static boolean canJump(int[] nums) {
         if(nums.length <= 1)return true;
         for(int i = 0; i < nums.length - 1;i++){
-//            if(!canJump(Arrays.copyOfRange(nums,0,i + 1)))
             if(canJump(Arrays.copyOfRange(nums,0,i + 1)) && nums[i] >= (nums.length - 1 - i)){
                 return true;
             }
