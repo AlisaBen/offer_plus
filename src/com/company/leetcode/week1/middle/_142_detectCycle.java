@@ -76,7 +76,7 @@ public class _142_detectCycle {
         return null;
     }
 
-    public ListNode detectCycle5(ListNode head) {
+    public static ListNode detectCycle5(ListNode head) {
         Set<ListNode> nodesSeen = new HashSet<>();
         while (head != null) {
             if (nodesSeen.contains(head)) {
@@ -87,6 +87,22 @@ public class _142_detectCycle {
             head = head.next;
         }
         return null;
+    }
+    public static ListNode detectCycle6(ListNode head) {
+        ListNode p = head;
+        ListNode q = head;
+        while (p != null && p.next != null){
+            p = p.next.next;
+            q = q.next;
+            if(p == q)break;
+        }
+        if(p == null || p.next == null)return null;
+        q = head;
+        while (p != q){
+            p = p.next;
+            q = q.next;
+        }
+        return p;
     }
 
     public static void main(String[] args){
@@ -100,7 +116,7 @@ public class _142_detectCycle {
         node0.next = node4;
         node4.next = node0;
 //        node2.next = node3;
-        ListNode res = detectCycle1(node3);
+        ListNode res = detectCycle6(node3);
         System.out.println(res.val);
     }
 }
