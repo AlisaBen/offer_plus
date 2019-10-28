@@ -6,6 +6,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 
+/**
+ * 深度优先搜索，递归树+剪枝
+ * */
 public class _47_permuteUnique {
     private static List<List<Integer>> res = new ArrayList<>();
     private static boolean[] used;
