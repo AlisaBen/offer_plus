@@ -19,26 +19,19 @@ public class _48_rotate {
                 tmp.add(matrix[i][index2]);
                 matrix[i][index2] = matrix[index1][i];
             }
-//            System.out.println(tmp);
             for(int j = index1 + 1;j <= index2;j++){
-//                System.out.println("oper:"+operate_num+" index_j:" + j);
                 int tmp1 = matrix[index2][j];
                 matrix[index2][j] = tmp.get(operate_num - 1 - (j - (index1 + 1)) - 1);
                 tmp.remove(operate_num - 1 - (j - (index1 + 1)) - 1);
                 tmp.add(operate_num - 1 - (j - (index1 + 1)) - 1,tmp1);
             }
-//            System.out.println(tmp);
             for(int i = index1 + 1;i <= index2;i++){
                 int tmp1 = matrix[i][index1];
                 matrix[i][index1] = tmp.get(operate_num - 1 - (i - (index1 + 1)) - 1);
                 tmp.remove(operate_num - 1 - (i - (index1 + 1)) - 1);
                 tmp.add(operate_num - 1 - (i - (index1 + 1)) - 1,tmp1);
-//                System.out.println("index:" + i + " num:" + tmp1);
-
             }
-//            System.out.println(tmp);
             for(int j = index1;j < index2;j++){
-//                System.out.println(tmp.get(j));
                 matrix[index1][j] = tmp.get(j - index1);
             }
             rotate_num--;

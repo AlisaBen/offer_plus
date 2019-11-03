@@ -12,9 +12,20 @@ public class _11_maxArea {
         }
         return result;
     }
+    public static int maxArea1(int[] height) {
+        int result = 0;
+        for(int i = 0,j = height.length - 1;i < j;){
+            result = Math.max(result,Math.min(height[i],height[j]) * (j-i));
+            if(height[i] < height[j])i++;
+            else j--;
+        }
+        return result;
+    }
     public static void main(String[] args){
         int[] height = {1,8,6,2,5,4,8,3,7};
-        int result = maxArea(height);
+//        int result = maxArea(height);
+        int result = maxArea1(height);
+
         System.out.println(result);
     }
 }
