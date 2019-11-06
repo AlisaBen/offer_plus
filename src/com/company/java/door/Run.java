@@ -1,7 +1,7 @@
 package com.company.java.door;
 
 import com.company.java.door.thread.MyRunnable;
-import com.company.java.door.thread.MyThread;
+import com.company.java.door.thread.*;
 
 /**
  * created by Arya on 2019/11/4
