@@ -2,6 +2,9 @@ package com.company.java.door._1_basic;
 
 import java.util.HashSet;
 
+/**
+ * ==和equals的区别
+ * */
 public class Test8 {
     public static void main(String[] args){
         String a = new String("ab");
