@@ -12,6 +12,8 @@ import java.util.Stack;
  * 否则，将该元素进栈，
  * 数组元素遍历结束之后，判断栈是否为空，如果栈不空将再次重头遍历数组，因为数组是循环的e
  * 判断截止的条件是所选的元素的索引要大于栈中存储的索引，最多遍历一遍数组
+ *
+ * 待优化的地方：是否可以一次循环解决？
  * */
 public class _503_nextGreaterElements {
     public int[] nextGreaterElements(int[] nums) {
