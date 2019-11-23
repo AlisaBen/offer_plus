@@ -1,7 +1,11 @@
 package com.company.leetcode.week5.middle;
 
 import java.util.Arrays;
+import java.util.Stack;
 
+/**
+ * 每日温度
+ * */
 public class _739_dailyTemperatures {
     public static int[] dailyTemperatures(int[] T) {
         for(int i = 0; i < T.length;i++){
@@ -38,6 +42,25 @@ public class _739_dailyTemperatures {
             next[T[i]] = i;//next数组中保证出现过的数值的位置存储对应的最小的索引
         }
 
+        return ans;
+    }
+
+    /**
+     * 方法三：栈
+     * 从后向前遍历
+     * 栈中存储有序序列，栈顶元素最大，存储对应的原数组中的索引
+     * 每次遍历一个元素，判断栈中是否有比该元素大的
+     * 如果没有，将栈清空，将该元素入栈（这是因为再向前遍历的时候，该元素肯定会截断后面的元素判断--因为该元素比后面的元素都大）
+     * 如果有比该元素大的元素，计算索引差值，并将该元素入栈到相应的位置
+     * */
+    public static int[] dailyTemperatures2(int[] T) {
+        Stack<Integer> s = new Stack<>();//栈中存储索引值，对应的栈顶的元素最大,即栈顶元素距离正在遍历的元素最远
+        int[] ans = new int[T.length];
+        for(int i = T.length - 1;i >= 0;--i){
+            while (!s.empty() && T[i] >= T[s.peek()])s.pop();//栈不空，栈顶索引对应的元素小于等于当前元素，出栈
+            ans[i] = s.empty()? 0 : s.peek() - i;
+            s.push(i);
+        }
         return ans;
     }
 
