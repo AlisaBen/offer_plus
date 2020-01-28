@@ -2,8 +2,6 @@ package com.company.leetcode.week4.easy;
 
 import com.company.jian_zhi_offer.base_package.ListNode;
 
-import java.util.List;
-
 /**
  * created by Arya on 2019/11/7 22:52
  * 移除链表指定元素

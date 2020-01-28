@@ -1,8 +1,7 @@
 package com.company.leetcode.week1.middle;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * 1/10
@@ -45,8 +44,8 @@ public class _46_permute {
         a.add(10);
 //        a.remove(34);
 //        System.out.println("000");
-        List r = permute(new int[]{1,2,3});
-        System.out.println(r);
+        // List r = permute(new int[]{1,2,3});
+        // System.out.println(r);
         ArrayList<Integer> b = new ArrayList<>(a);
         for(int i = 0; i < b.size();i++){
             System.out.println(b.get(i));
@@ -56,8 +55,6 @@ public class _46_permute {
         }
         List<Integer> ss = new ArrayList<>();
         ss.add(56);
-        System.out.println(ss);
-        System.out.println("===");
         int len = a.size();
         for(int i = 0; i < len;i++){
 //            System.out.println(a.get(i));
@@ -65,7 +62,6 @@ public class _46_permute {
 //            a.remove(a.get(i));
 //            System.out.println(a.size());
         }
-        System.out.println(len);
         while (len > 0){
             System.out.println(a.get(len - 1));
             a.remove(a.get(len - 1));

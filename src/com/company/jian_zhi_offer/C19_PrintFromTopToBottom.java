@@ -44,7 +44,7 @@ public class C19_PrintFromTopToBottom {
         TreeNode node4 = new TreeNode(4);
         TreeNode node2 = new TreeNode(2);
         TreeNode node1 = new TreeNode(1);
-        TreeNode node8 = new TreeNode(8);
+        // TreeNode node8 = new TreeNode(8);
 //        node8.left = node7;
 //        node7.left = node6;
 //        node6.left = node5;
