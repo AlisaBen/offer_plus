@@ -1,8 +1,6 @@
 package com.company.jian_zhi_offer.tree;
 
 import com.company.jian_zhi_offer.base_package.TreeNode;
-import sun.reflect.generics.tree.Tree;
-
 import java.util.ArrayList;
 import java.util.TooManyListenersException;
 

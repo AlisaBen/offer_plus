@@ -1,8 +1,6 @@
 package com.company.leetcode.week8.middle;
 
 import com.company.jian_zhi_offer.base_package.TreeNode;
-import jdk.nashorn.internal.ir.WhileNode;
-
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;

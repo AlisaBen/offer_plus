@@ -1,8 +1,6 @@
 package com.company.leetcode.week4.easy;
 
 import com.company.jian_zhi_offer.base_package.ListNode;
-import org.omg.Messaging.SYNC_WITH_TRANSPORT;
-
 /**
  * created by Arya on 2019/11/7 23:15
  * 删除链表中的节点

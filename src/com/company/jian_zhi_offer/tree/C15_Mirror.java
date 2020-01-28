@@ -1,7 +1,6 @@
 package com.company.jian_zhi_offer.tree;
 
 import com.company.jian_zhi_offer.base_package.TreeNode;
-import sun.reflect.generics.tree.Tree;
 
 /**
  * 操作给定的二叉树，将其变换为源二叉树的镜像。

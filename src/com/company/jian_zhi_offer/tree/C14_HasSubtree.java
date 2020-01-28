@@ -1,9 +1,6 @@
 package com.company.jian_zhi_offer.tree;
 
 import com.company.jian_zhi_offer.base_package.TreeNode;
-import com.sun.org.apache.xpath.internal.operations.Bool;
-import sun.reflect.generics.tree.Tree;
-
 /**
  * 输入两棵二叉树A，B，判断B是不是A的子结构。（ps：我们约定空树不是任意一个树的子结构）
  * 与子树不同的是，子结构可以是A树的任意一部分
