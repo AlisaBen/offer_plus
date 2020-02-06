@@ -30,8 +30,10 @@ public class C40_IsBalanced_Solution {
         // node1.right = node3;
         // node2.right = node4;
 
-        node1.left = node2;
-        node2.right = node3;
+        // node1.left = node2;
+        // node2.right = node3;
+
+        
         boolean s = IsBalanced_Solution(node1);
         System.out.println(s);
     }
