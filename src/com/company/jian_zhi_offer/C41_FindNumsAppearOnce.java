@@ -3,6 +3,7 @@ package com.company.jian_zhi_offer;
  * 
  * & 只要有0，就是0
  * ^ 只要不一样就是1
+ * >> n 右移n位
  */
 //num1,num2分别为长度为1的数组。传出参数
 //将num1[0],num2[0]设置为返回结果
