@@ -23,14 +23,14 @@ public class C45_ReverseSentence {
         String result = "";
         int start = 0;
         int end = start;
-        System.out.println(s);
+        // System.out.println(s);
         while (start < str.length()) {
             end = start;
             while (end < str.length() && s.charAt(end) != ' ') {
                 end ++;
             }
             String tmp = reverse(s.substring(start, end));
-            System.out.println("tmp: " + tmp + "          result:" + result);
+            // System.out.println("tmp: " + tmp + "          result:" + result);
             result = result.concat(tmp);
             if (end != str.length()) {
                 result = result.concat(" ");
