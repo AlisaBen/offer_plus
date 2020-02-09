@@ -1,5 +1,6 @@
 package com.company.jian_zhi_offer;
 
+// 上溢出和下溢出
 public class C50_StrToInt {
     public static int StrToInt(String str) {
         if (str == "" || str.length() == 0) return 0;
@@ -20,7 +21,7 @@ public class C50_StrToInt {
             }
         }
         sum = negative == 0 ? sum : - sum;
-        if (negative == 0 && sum > Integer.MAX_VALUE || negative == 1 && sum > 0) {
+        if (negative == 0 && sum < 0 || negative == 1 && sum > 0) {
             return 0;
         }
         return sum;
