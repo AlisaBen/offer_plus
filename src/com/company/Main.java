@@ -122,7 +122,7 @@ public class Main {
         queue.offer(5);
         System.out.println(queue); // [3, 4, 5]
         Integer t = queue.poll();
-        System.out.println(queue); // [3, 4, 5]
+        System.out.println(queue); // [4, 5]
 
 
 

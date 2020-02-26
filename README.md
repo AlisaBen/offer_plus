@@ -26,6 +26,27 @@ System.out.println(num);
 String s3 = String.valueOf(num); // 数字转换字符串
 System.out.println(s3);
 ```
+
+### StringBuilder
+
+1. `StringBuilder string = new StringBuilder("");`
+2. `.append(obj)`
+3. `.insert(index,obj)`
+4. `.charAt(index)`
+5. `.length()`
+6. `.delete(startIndex,endIndex)`
+7. `.replace(startIndex,endIndex,"")`
+
+```java
+StringBuilder string = new StringBuilder("");
+string.append("3");
+string.insert(0, "r");
+char c = string.charAt(0);
+int len = string.length();
+string.delete(0, 1);
+string.replace(0, 1, "45");
+```
+
 ### 数组
 1. `.length`
 2. `Arrays.sort(array)`
@@ -87,6 +108,15 @@ System.out.println(intarr[0]);
 
 ```
 
+### Set
+```java
+Set<Integer> set = new HashSet<>();
+set.size();
+set.contains(4);
+set.isEmpty();
+set.remove(4);
+```
+
 ### Map
 1. `Map<Integer, Integer> map = new HashMap<Integer, Integer>()`
 2. `.put(key,value)`
@@ -133,6 +163,45 @@ boolean flag = map.containsKey(2);
 boolean empty = map.isEmpty();
 int size = map.size();
 map.clear();
+```
+
+### Stack
+1. `Stack<Integer> stack = new Stack<>()`
+2. `.push(object)`
+3. `.pop()`
+4. `.peek()`
+5. `.isEmpty()`
+### Queue
+1. `Queue<Integer> queue = new LinkedList<>()`
+2. `.offer(object)`
+3. `.poll()`
+4. `.element()` 返回队列头，如果没有元素会报错
+5. `.isEmpty()`
+
+```java
+ //--------------Stack------------
+Stack<Integer> stack = new Stack<>();
+stack.push(3);
+stack.push(4);
+Integer top = stack.peek();
+System.out.println(stack.size()); // 2
+Integer pop = stack.pop();
+System.out.println(stack.size()); // 1
+System.out.println(stack.isEmpty()); // false
+
+// ---------queue
+Queue<Integer> queue = new LinkedList<>();
+queue.add(3); // 没有可用空间会报错IllegalStateException
+queue.add(4);
+// queue.clear();
+Integer q = queue.element(); // 返回队列头 如果队列为空，会报错
+// Integer p = queue.peek(); //返回队列头，队列为空不会报错
+System.out.println(q); // 3
+queue.offer(5);
+System.out.println(queue); // [3, 4, 5]
+Integer t = queue.poll();
+System.out.println(queue); // [4, 5]
+
 ```
 
 
